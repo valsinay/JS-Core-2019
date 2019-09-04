@@ -1,0 +1,33 @@
+<h1>Car Listings</h1>
+<div id="listings">
+    <div class="listing">
+        <p>{{title}}</p>
+        <img src="{{imageUrl}}">
+        <h2>Brand: {{brand}}</h2>
+        <div class="info">
+            <div id="data-info">
+                <h3>Seller: {{seller}}</h3>
+                <h3>Fuel:{{fuel}}</h3>
+                <h3>Year: {{year}}</h3>
+                <h3>Price: {{price}} $</h3>
+            </div>
+            <div id="data-buttons">
+                <ul>
+                    <li class="action">
+                        <a href="#/cars/details/{{_id}}" class="button-carDetails">Details</a>
+                    </li>
+                   {{#if loggedIn}}
+                    <li class="action">
+                        <a href="#/cars/edit-car/{{_id}}  " class="button-carDetails">Edit</a>
+                    </li>
+                    <li class="action">
+                        <a href="#/cars/delete-car/{{_id}}" class="button-carDetails">Delete</a>
+                    </li>
+
+                    {{/if}}
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
